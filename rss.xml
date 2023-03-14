@@ -1,0 +1,12 @@
+<rss version="2.0">
+<channel>
+<title>Notifications</title>
+      <link>https://menkovic.github.io</link>
+    <description>What's new about the club?</description>
+<item>
+<title>New Gallery</title>
+          <link>https://menkovic.github.io/gallery.html</link>
+          <description>You can see now more pictures of players and club!</description>
+</item>
+    </channel>
+</rss>
