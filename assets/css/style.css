@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*{
+margin:0px;
+padding:0px;
+box-sizing:border-box;
+}
+@font-face {
+    font-family:'Pacifico', cursive;
+    src: url(../font/Rubik-Regular.ttf);
+}
+@keyframes slide-down { 
+    from {
+      top: -100px; 
+    }
+    to {
+      top: 0px; 
+    }
+}
+@keyframes slide-up { 
+    from {
+      bottom: -100px; 
+    }
+    to {
+      bottom: 0px; 
+    }
+}
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px); 
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+}
+@keyframes fade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+body{
+    background-color:rgba(6, 16, 36, 0.93);
+    background-size:cover;
+    color:#ffffff;
+    font-family:'Montserrat',sans-serif;
+}
+ul{
+    list-style-type:none;
+}
+.cleaner{
+    clear:both;
+}
+
+header{
+    background:rgba(5, 12, 26, 0.93);
+    z-index:1;
+    width:100%; 
+    position:fixed;
+    top:0px;
+    animation-name: slide-down; 
+    animation-duration: 1s;
+}
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    animation-name: fade-in;
+  animation-duration: 1.7s;
+  animation-fill-mode: forwards;
+}
+.nav_links{
+    display:flex;
+}
+.nav_links a{
+    margin-left:4rem;
+    margin-right:4rem;
+
+    font-size:2rem;
+}
+
+.logo{
+    height:5rem;
+}
+
+li,a,button,p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:500;
+    font-size: 1.25rem;
+    color:#ffffff;
+    text-decoration:none;
+}
+
+.nav_links a{
+    text-decoration:none;
+    transition:all 0.3s ease 0s;
+    font-size:1.5rem;
+}
+
+.nav_links a:hover{
+    color:rgba(196, 35, 35, 0.61);
+    text-decoration:underline;
+    transition:all 0.1s ease 0.1s;
+}
+
+.nav_links a:active{
+    color:rgba(49, 125, 238, 0.808)
+}
+
+.stadion{
+    width: 100%;
+    height: 60vh;
+    display:block;
+    object-fit: cover;
+    border-radius:5px;
+  }
+
+  .barca{
+    width:100%;
+    overflow:hidden;
+    position: relative;
+    border-radius:10px;
+    overflow: hidden;
+    margin-top:80px;
+    animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  }
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    top:0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738 ;
+    backdrop-filter: blur(5px);
+    border-radius:15px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition:0.5s;
+}
+
+.naslov{
+    font-size: 30px;
+    padding-bottom: 10px;
+    animation-name: fade; 
+    animation-duration: 2s;
+}
+
+.podnaslov{
+    font-size: 25px;
+}
+
+.barca:hover .overlay{
+    right:0px;
+}
+#achievements{
+    justify-content: center;
+    text-align: center;
+    margin-top:190px;
+    margin-bottom:150px;
+    border:solid 5px;
+    border-radius: 15px;
+    border-color:rgb(83, 9, 9);
+    box-shadow:0px 0px 5px 2px rgb(83, 9, 9);
+    width:30%;
+    margin-left:auto;
+    margin-right:auto;
+    animation-name: fade; 
+    animation-duration: 2s;
+}
+h2{
+    font-size:3rem;
+}
+
+.cl {
+    width:40%;
+    height:100%;
+    filter:grayscale(60%);
+}
+.cl:hover{
+    filter:grayscale(0%);
+    transition: ease-in-out 0.5s;
+}
+.blok{
+    width:80%;
+    height:40rem;
+    border: solid 5px;
+    border-color:rgb(83, 9, 9);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border-radius:5px;
+    margin:auto;
+    box-shadow:0px 0px 20px 2px rgb(83, 9, 9);
+    text-align: center;
+    animation-name: fade; 
+    animation-duration: 2.3s;
+}
+.tekst {
+    width:60%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100%;
+    padding:20px;
+}
+.tekst, p{
+    font-size:2.5rem;
+}
+
+.galerijablok{
+    width:80%;
+    margin:auto;
+    background-color:rgb(53, 69, 77);
+    height:31rem;
+    margin-top:10rem;
+    display:flex;
+    animation-name: fade; 
+    animation-duration: 2.3s;
+}
+.galerijablok p{
+    font-size:2rem;
+    text-align:center;
+}
+.fa-solid{
+    color:rgb(212, 24, 24);
+    font-size:4rem;
+    position:relative;
+    text-align:center;
+    top:2rem;
+}
+.svrstaj{
+    position:relative;
+    width:30%;
+    margin:2.8rem auto;
+    display: flex;
+    flex-direction: column;
+}
+.dugme{
+    position:absolute;
+    bottom: 10%;
+    left:30%;
+    background:rgb(12, 17, 27);
+    padding:0.8rem 1.6rem;
+    border-radius:1.5rem;
+    font-size:2rem;
+    transition:transform 0.3s ease;
+}
+.dugme::after, .btn-1::before{
+    content:"";
+    position: absolute;
+    opacity:0.3;
+    background: #000;
+    border-radius:inherit;
+    width: 100%;
+    height: 100%;
+    left:0px;
+    bottom:0px;
+    z-index:-1;
+    transition: transform 0.3s ease;
+}
+.dugme:hover{
+    transform: translate(-1rem,-1rem);
+}
+.dugme:hover::after{
+    transform:translate(6px,6px);
+}
+.dugme:hover::before{
+    transform: translate(12px,12px);
+}
+.tim{
+    height:100%;
+    width:60%;
+}
+#scorers{
+
+    font-size:2rem;
+    border-radius:1rem;
+    border:solid 5px;
+    border-color:rgb(83, 9, 9);;
+    box-shadow:0px 0px 5px 2px rgb(83, 9, 9);;
+    margin:150px auto 80px auto;
+    width:30%;
+    padding:0.6rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    animation-name: fade; 
+    animation-duration: 2.5s;
+    animation-fill-mode: backwards;
+}
+.container{
+    background-color: rgb(28, 45, 77);
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    border-top:solid 5px;
+    border-bottom:solid 5px;
+
+    border-radius:7px;
+    border-color:rgb(83, 9, 9);
+    margin-bottom:100px;
+    animation-name: fade; 
+    animation-duration: 2.5s;
+}
+.card{
+    box-shadow:5px 5px 20px black;
+    overflow:hidden;
+    position:relative;
+    border-radius:6px;  
+}
+.karte{
+    height:450px;
+    width:45vh;
+}
+
+.intro{
+    padding:6px;
+    box-sizing:border-box;
+    position:absolute;
+    bottom:-5px;
+    width:45vh;
+    height:70px;
+    background:rgb(27,27,27,0.46);
+}
+
+h4{
+    font-size:25px;
+    margin:10px;
+    font-family:Pacifico,cursive;
+}
+
+.lista1{
+    list-style-type:none;
+}
+.lista1 li{
+    font-size:22px;
+}
+.card:hover{
+    cursor: pointer;
+}
+.card:hover .intro{
+    height:180px;
+    bottom:0px;
+    background:rgb(27,27,27,0.8);
+    transition: ease 0.4s;
+}
+.card:hover .karte{
+    transform: scale(1.05) rotate(-1deg);
+    transition:ease-in-out 0.4s;
+}
+#footer{
+    width: 100%;
+    height: 210px;
+    background: linear-gradient(transparent, rgba(23, 71, 155, 0.93));
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    position:relative;
+    bottom:0px;
+    margin-top:100px;
+    animation-name: slide-up; 
+    animation-duration: 2s;
+}
+.fa-square-rss{
+    font-size:30px;
+    color:rgb(224, 152, 18);
+}
+.fa-sitemap{
+    font-size:30px;
+}
+#footer a{
+    color:rgb(241, 237, 237);
+}
+#footer a:hover{
+    color:#0a0a0a;
+}
+
+.socials {
+    width: 15%;
+    display: block;
+    text-align: left;
+    padding: 5px auto;
+}
+.fa{
+    color: #332023;
+    font-size: large;
+    padding:4px 10px;
+}
+.footer-centar{
+    width: 40%;
+    text-align: center;
+    color: #42070e;
+    display:flex;
+    flex-direction: column;
+}
+.footer-link{
+    width: 15%;
+    text-align: right;
+}
+.footer-link ul li{
+    padding: 5px 0px;
+}
+
+/* GALLERY */
+.kontis {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top:200px;
+  }
+.content {
+    display:block;
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+    background-image:url(../img/pozadina1.jpg);
+
+  }
+.gslike{
+    width:40%;
+    height:600px;
+    padding:40px;
+}
+
+.content h1{
+    font-size:50px;
+    color:#0a0a0a;
+    background-color: rgba(16, 133, 211, 0.822);
+    border-radius: 15px;
+    display:inline-block;
+    margin:0px auto;
+    padding:10px;
+    
+}
+.polje{
+   display:flex;
+   justify-content: center;
+   margin:20px 0px;
+}
+.slike1{
+    max-width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gslike:hover{
+    transform:scale(1.1);
+    transition:0.4s;
+}
+
+/* LINEUP */
+.lineup 
+{ 
+    width: 70%;
+    margin:8.4rem auto 0px auto; 
+    border: 0.7rem solid #000; 
+    background-color:rgba(51, 80, 48, 0.466);
+    border-radius:15px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    animation-name: fade; 
+    animation-duration: 2s;
+}
+.postavaslika{
+    width:40%;
+    height:100vh;
+}
+.postava{
+    width:60%;
+    display:inline-block;
+    text-align:center;
+    line-height: 1.5;
+    margin:1rem 0rem;
+}
+.postava ul{
+    padding:5px;
+}
+.postava li{
+    font-size:0.9rem;
+    font-weight: 300;
+}
+.prezime{
+    font-size:1.1rem;
+    font-weight:bold;
+}
+.goal p{
+    font-size:1.2rem;
+    border:solid 3px #a50707;
+    border-radius:10px;
+    display:inline;
+    background-color: #42070e;
+}
+.goal{
+    padding:30px;
+}
+
+/* CONTACT */
+main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: fade; 
+    animation-duration: 2.5s;
+}
+.mapa{
+    margin-left: 25%;
+    border-radius: 1rem;
+}
+.okvir{
+    width:100%;
+    background-color: rgba(15, 110, 211, 0.226);
+    height:39rem;
+    margin-top:220px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top:solid 5px rgba(15, 110, 211, 0.568);
+    border-bottom: solid 5px rgba(15, 110, 211, 0.568);
+}
+.com {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 40px;
+}
+  
+.join-community {
+    background-color: #5e646b;
+    padding: 10px 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+} 
+.join-community h2 {
+    color: #0e0a0a;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+    
+.join-community form {
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+      
+.join-community label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+      
+.join-community input[type="text"],.join-community input[type="email"],.join-community input[type="tel"],.join-community textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+      
+.join-community input[type="submit"] {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+      
+.join-community input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* AUTHOR */
+.author{
+    width:80%;
+    height:750px;
+    background-color:#2d4c578f;
+    margin-top:200px;
+    border-radius: 15px;
+    border:solid 7px  hsla(0, 0%, 100%, 0.459);
+}
+.author h1{
+    text-align: center;
+    font-size:60px;
+    padding-bottom: 50px;
+}
+.podaci{
+    color:black;
+}
+.autorslika{
+    width:30%;
+    height:500px;
+    border-radius:15px;
+    border:solid 5px #0a0a0a;
+}
+.centarautor{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.edit{
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    color:whitesmoke;
+    border-bottom:solid #00e1ff;
+}
+.autorslika:hover{
+    transform: scale(1.1);
+    transition:ease-in-out;
+    transition-duration: 0.3s;
+}
